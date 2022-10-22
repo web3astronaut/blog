@@ -1,0 +1,50 @@
+name: Add Blog Post
+description: Add a blog entry outlining any web3 technologies.
+title: "[Blog Post]: <name>"
+labels: ["blog-post"]
+assignees:
+  - Envoy-VC
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Post Description
+      description: Tell us more about the post.
+      placeholder: What does this post explain, and why did you decide to write about this subject?
+    validations:
+      required: true
+  - type: dropdown
+    id: post-category
+    attributes:
+      label: Post Category
+      description: What would you use to characterize the post's category?
+      options:
+        - Tutorial
+        - Product Breakdown
+        - Web3 Trends
+        - Educational Resources
+        -
+    validations:
+      required: true
+  - type: dropdown
+    id: assign
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: false
+  - type: input
+    id: open-source
+    attributes:
+      label: Are you involved in any open source initiatives.
+      description: For instance, Hacktoberfest, Hacksquad, GSoc, GSoD, and so forth
+      placeholder: Hacktoberfest 2022, Hacksquad.
+  - type: checkboxes
+    attributes:
+      label: Undertaking
+      description: By ticking this, you certify that you have already examined the issue in question, that it is not a duplicate, and that the ensuing similar post is not present in the repository.
+      options:
+        - label: I concur that this post is unique and not already available.
+          required: true
